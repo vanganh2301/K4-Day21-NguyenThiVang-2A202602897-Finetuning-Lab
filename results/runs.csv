@@ -1,0 +1,5 @@
+run,label,tier,model,precision,placement,n_target_modules,r,lora_alpha,learning_rate,load_in_4bit,trainable_params,train_seconds,peak_vram_gb,final_loss,mask_mode,max_steps
+correct,Correct (text-linear),T4,unsloth/Qwen3.5-4B,fp16,text-linear,12,16,32,0.0001,False,32464896,440.0,8.78,0.0549,assistant-only,30
+attn_only,Attention-only (q/v matched),T4,unsloth/Qwen3.5-4B,fp16,attention-only,2,283,566,0.0001,False,32456704,293.8,8.79,0.0531,assistant-only,30
+wrong_lr,Wrong learning rate (1e-5),T4,unsloth/Qwen3.5-4B,fp16,text-linear,12,16,32,0.00001,False,32464896,436.5,8.78,0.0903,assistant-only,30
+qlora,QLoRA (4-bit NF4),T4,unsloth/Qwen3.5-4B,fp16,text-linear,12,16,32,0.0001,True,32464896,511.5,3.86,0.0670,assistant-only,30
